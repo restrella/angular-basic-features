@@ -1,0 +1,55 @@
+
+<!-- <div *ngFor="let data of blogs">
+    Title: {{data.title}}
+    Description: {{data.description}}
+</div> -->
+
+<!-- blogs[0] -->
+<!-- <app-blog-item [blog]="blogs[0]"></app-blog-item> -->
+
+<!-- <div *ngFor="let data of blogs; let i = index">
+    <app-blog-item 
+    *ngIf="data.published && data.authorActive" 
+    [blogInput]="data"
+    (actionEmitter)="executeAction($event, i)" >
+</app-blog-item>
+</div> -->
+
+<!-- <div [ngSwitch]="num">
+    <div *ngSwitchCase="1">One</div>
+    <div *ngSwitchCase="2">Two</div>
+    <div *ngSwitchCase="3">Three</div>
+    <div *ngSwitchCase="4">Four</div>
+    <div *ngSwitchDefault>None</div>
+</div>
+
+<button (click)="incrementNum()">Increment NUm</button> -->
+
+<!-- <div [ngSwitch]="num">
+    <ng-container *ngFor="let data of numArray">
+        <div *ngSwitchCase="data">{{data}}</div>
+    </ng-container>
+    <div *ngSwitchDefault>None</div>
+</div>
+
+<button (click)="incrementNum()">Increment Num</button> -->
+
+<!-- <div [ngStyle]="{'width':width, 'heigh':height,'background-color':color}">
+Test DIV
+</div> -->
+
+<!-- <button (click)="changeCss()">Change CSS</button>
+    
+    <div *ngFor="let data of blogs">
+        <div [ngStyle]="{'width':width, 'heigh':height,'background-color':data.published ? 'green': 'red'}">
+            <app-blog-item [blogInput]="data"></app-blog-item>    
+        </div>
+    </div> -->
+
+    <!-- <div [ngClass]="{card:true}">UsingClass</div> -->
+
+    <div *ngFor="let data of blogs">
+        <div [ngClass]="{card:data.published}">
+            <app-blog-item [blogInput]="data"></app-blog-item>    
+        </div>
+    </div>
